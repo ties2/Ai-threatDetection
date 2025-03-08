@@ -155,3 +155,29 @@
 2025-03-08 12:55:26,601 - ai_threat_detection - INFO - [SIMULATED EMAIL] To: ['security-team@example.com', 'noc@example.com'], Subject: Critical Threat Alert - Score: 100.0
 2025-03-08 12:55:26,601 - ai_threat_detection - INFO - [SIMULATED EMAIL] Body: Detected 0 traceroute anomalies and 21 potential BGP hijacks at 2025-03-08 11:00:00
 2025-03-08 12:55:26,601 - ai_threat_detection - INFO - [SIMULATED API CALL] POST to https://api.example.com/security-notifications
+2025-03-08 15:57:28,772 - ai_threat_detection - INFO - Initializing AI Threat Detection System
+2025-03-08 15:57:29,016 - ai_threat_detection - ERROR - Error fetching data for measurement 1234: 404 Client Error: Not Found for url: https://atlas.ripe.net/api/v2/measurements/1234/results/?start=1738853848
+2025-03-08 15:57:29,238 - ai_threat_detection - ERROR - Error fetching data for measurement 5678: 404 Client Error: Not Found for url: https://atlas.ripe.net/api/v2/measurements/5678/results/?start=1738853848
+2025-03-08 15:57:29,243 - ai_threat_detection - WARNING - No historical data provided for training
+2025-03-08 15:57:29,245 - ai_threat_detection - INFO - Fetched 100 BGP announcements
+2025-03-08 15:57:29,245 - ai_threat_detection - INFO - Fetched 80 RPKI ROAs
+2025-03-08 15:57:29,256 - ai_threat_detection - INFO - Route validation summary: {'valid': 76, 'unknown': 20, 'invalid': 4}
+2025-03-08 15:57:29,335 - ai_threat_detection - INFO - BGP hijack detector trained. Train accuracy: 1.000, Test accuracy: 1.000
+2025-03-08 15:57:29,337 - ai_threat_detection - INFO - Feature importance: {'prefix_length': np.float64(0.0), 'as_path_length': np.float64(0.019116945144074644), 'validation_state_numeric': np.float64(0.5578219411520822), 'matching_roas': np.float64(0.41622819284229073), 'is_private_asn': np.float64(0.006832920861552509)}
+2025-03-08 15:57:29,337 - ai_threat_detection - INFO - System initialization complete
+2025-03-08 15:57:29,337 - ai_threat_detection - INFO - Starting threat detection cycle
+2025-03-08 15:57:29,534 - ai_threat_detection - ERROR - Error fetching data for measurement 1234: 404 Client Error: Not Found for url: https://atlas.ripe.net/api/v2/measurements/1234/results/?start=1741359449
+2025-03-08 15:57:29,743 - ai_threat_detection - ERROR - Error fetching data for measurement 5678: 404 Client Error: Not Found for url: https://atlas.ripe.net/api/v2/measurements/5678/results/?start=1741359449
+2025-03-08 15:57:29,743 - ai_threat_detection - WARNING - No traceroute data returned
+2025-03-08 15:57:29,744 - ai_threat_detection - INFO - Fetched 100 BGP announcements
+2025-03-08 15:57:29,749 - ai_threat_detection - INFO - Route validation summary: {'valid': 76, 'unknown': 20, 'invalid': 4}
+2025-03-08 15:57:29,761 - ai_threat_detection - INFO - Detected 24 potential hijacks out of 100 routes
+2025-03-08 15:57:29,761 - ai_threat_detection - ERROR - traceroute_analysis is None in integrate_data
+2025-03-08 15:57:29,767 - ai_threat_detection - INFO - Integrated 0 traceroute periods with 2 BGP periods
+2025-03-08 15:57:29,768 - ai_threat_detection - INFO - Threat scores calculated
+2025-03-08 15:57:29,768 - ai_threat_detection - INFO - Threat level summary: {'Critical': 1, 'Low': 1}
+2025-03-08 15:57:29,769 - ai_threat_detection - INFO - Generated 1 alerts
+2025-03-08 15:57:29,769 - ai_threat_detection - INFO - Generated 1 mitigation plans
+2025-03-08 15:57:29,769 - ai_threat_detection - INFO - [SIMULATED EMAIL] To: ['security-team@example.com', 'noc@example.com'], Subject: Critical Threat Alert - Score: 100.0
+2025-03-08 15:57:29,769 - ai_threat_detection - INFO - [SIMULATED EMAIL] Body: Detected 0 traceroute anomalies and 21 potential BGP hijacks at 2025-03-08 14:00:00
+2025-03-08 15:57:29,769 - ai_threat_detection - INFO - [SIMULATED API CALL] POST to https://api.example.com/security-notifications
